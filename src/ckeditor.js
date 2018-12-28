@@ -13,6 +13,7 @@ import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
+import Emoji from '@wwalc/ckeditor5-emoji/src/emoji';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
@@ -21,6 +22,7 @@ import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Link from '@ckeditor/ckeditor5-link/src/link';
+import InternalLink from './InternalLink';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
@@ -39,6 +41,7 @@ ClassicEditor.builtinPlugins = [
 	Italic,
 	BlockQuote,
 	CKFinder,
+	Emoji,
 	EasyImage,
 	Heading,
 	Image,
@@ -47,6 +50,7 @@ ClassicEditor.builtinPlugins = [
 	ImageToolbar,
 	ImageUpload,
 	Link,
+	InternalLink,
 	List,
 	MediaEmbed,
 	Paragraph,
@@ -57,6 +61,14 @@ ClassicEditor.builtinPlugins = [
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
+	emoji: [
+		{ name: 'smile', text: '😀' },
+		{ name: 'wink', text: '😉' },
+		{ name: 'cool', text: '😎' },
+		{ name: 'surprise', text: '😮' },
+		{ name: 'confusion', text: '😕' },
+		{ name: 'crying', text: '😢' }
+	],
 	toolbar: {
 		items: [
 			'heading',
@@ -71,7 +83,8 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			'emoji'
 		]
 	},
 	image: {
