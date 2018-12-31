@@ -25,6 +25,7 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import InternalLink from './InternalLink';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
+import Mention from './Mention';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
@@ -53,6 +54,7 @@ ClassicEditor.builtinPlugins = [
 	InternalLink,
 	List,
 	MediaEmbed,
+	Mention,
 	Paragraph,
 	PasteFromOffice,
 	Table,
